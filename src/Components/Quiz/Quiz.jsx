@@ -5,12 +5,17 @@ import {data} from "../../assets/data.js";
 const Quiz = () => {
     let [index, setIndex] = useState(0);
     let [question, setQuestion] = useState(data[index]);
+    let [lock, setLock] = useState(false);
 
     const checkAnswer = (e, ans) => {
-        if(ans === question.ans) {
-            e.target.classList.add("correct");
-        }else{
-            e.target.classList.add("wrong");
+        if(lock === false){
+            if(ans === question.ans) {
+                e.target.classList.add("correct");
+                setLock(true);
+            }else{
+                e.target.classList.add("wrong");
+                setLock(true);
+            }
         }
     }
 
