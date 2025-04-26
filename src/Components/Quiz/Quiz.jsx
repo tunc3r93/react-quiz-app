@@ -1,17 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Quiz.css";
+import {data} from "../../assets/data.js";
 
 const Quiz = () => {
+    let [index, setIndex] = useState(0);
+    let [question, setQuestion] = useState(data[index]);
+
     return (
         <div className="container">
             <h1>Quiz App</h1>
             <hr />
-            <h2>Which HTML tag is used to create a hyperlink?</h2>
+            <h2>{index + 1} . {question.question}</h2>
             <ul>
-                <li>&lt;link&gt;</li>
-                <li>&lt;a&gt;</li>
-                <li>&lt;href&gt;</li>
-                <li>&lt;url&gt;</li>
+                <li>{ question.option1 }</li>
+                <li>{ question.option2 }</li>
+                <li>{ question.option3 }</li>
+                <li>{ question.option4 }</li>
             </ul>
             <button>Next</button>
             <div className="index">
