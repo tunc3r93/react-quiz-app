@@ -54,7 +54,7 @@ const Quiz = () => {
             </ul>
             <button onClick={() => next()}>Next</button>
             <div className="index">
-                1 of 5 questions
+                {index + 1} of {data.length} questions
             </div>
         </div>
     )
