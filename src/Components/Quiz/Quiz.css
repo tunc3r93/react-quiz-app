@@ -43,7 +43,17 @@
     cursor: pointer;
     margin: auto;
 }
-.index {
+.container .index {
     font-size: 18px;
     margin: auto;
+}
+
+.container .correct {
+    background: #DFFFF2;
+    color: #00D397;
+}
+
+.container .wrong {
+    background: #FFEBEB;
+    border-color: #FF4A4A;
 }
