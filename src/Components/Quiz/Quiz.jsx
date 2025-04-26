@@ -37,6 +37,7 @@ const Quiz = () => {
             option_array.map((option) => {
                 option.current.classList.remove("correct");
                 option.current.classList.remove("wrong");
+                return null;
             })
         }
     }
